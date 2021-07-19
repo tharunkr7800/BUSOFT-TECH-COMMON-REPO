@@ -23,11 +23,10 @@ for doc in tqdm(nlp.pipe(df.Text.iloc[:].str.lower().values, disable=["tagger", 
 with open("E:\\intern\\final_full_length.csv", "w", newline="",encoding="utf-8") as f:
     writer = csv.writer(f)
     writer.writerows(tok_text)
-final=[]
+    
 with open('E:\\intern\\final_full_length.csv', newline='',encoding="utf-8") as f:
     reader = csv.reader(f)
     data = list(reader)
-    final.append(data)
 #create bmi class object after reading from csv file
 bmi=final_similar.find_similar_api(data) 
 with open('E:\\intern\\object.obj', 'wb') as object_file:
