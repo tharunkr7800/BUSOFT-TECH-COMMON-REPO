@@ -1,0 +1,21 @@
+.align-serchbtn{
+    margin-top: 20px;
+    margin-left:0;
+}
+ng2-smart-table{
+    tr{
+        th{
+            &:first-child{
+                display: none;
+            }
+        }
+        td{
+            &:first-child{
+                display: none;
+            }
+        }
+    }
+}
+.ng2-smart-actions-title{
+    display: none;
+}
