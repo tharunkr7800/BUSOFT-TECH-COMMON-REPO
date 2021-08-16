@@ -1,0 +1,50 @@
+.right-content{
+  margin-bottom:20px;
+  background:#d7d8f7;
+  padding:20px;
+  position:relative;
+  top:-40px;
+  left:5px;
+  border-radius:10px;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+.left-content{
+  padding:20px 0px;
+  position:relative;
+  top:-40px;
+}
+.right-content:after {
+	  right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: #d7d8f7;
+    border-width: 20px;
+    margin-top: -20px;
+}
+
+.custom-marker{
+  width:40px;
+  height:40px;
+  border-radius: 40px;
+  color:#fff;
+  background: #3639a4;
+  padding:10px;
+  i{
+    font-size: 1.3rem;
+  }
+}
+.customized-timeline{
+  margin-top:50px;
+}
+.mt-20{
+  margin-top:20px;
+}
+.mb-20{
+  margin-bottom: 20px;
+}

@@ -1,0 +1,48 @@
+$green: #7DEB94;
+$blue: #729CF2;
+$aqua: #6FEBF4;
+$white: #FAFAF7;
+$yellow: #F7E482;
+$pink:#FC88B1;
+.notes{
+  padding:10px;
+  color:#000;
+  margin-bottom: 1rem;
+  border-left:solid 3px $green;
+  background: $white;
+  .notes-title{
+    font:{
+      size: 1.25rem;
+      weight:bold;
+    }
+  }
+  .notes-footer{
+    font:{
+      size: .8rem;
+    }
+  }
+}
+.mb-10{
+  margin:{
+    bottom: 1rem;
+  }
+}
+.folded_corner{
+  position:relative;
+  margin:0px auto 4vh auto;
+  padding:20px;
+  color:#222;
+  background: #d2ccf5;
+  background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 2em 2em,
+    linear-gradient(-135deg, transparent 1.5em, #fff 0);
+}
+.folded_corner::before{
+  content: ' ';
+  position:absolute;
+  top:2em;
+  right:0;
+  background: linear-gradient(to left bottom, transparent 50%, #fff 0) 100% 0 no-repeat;
+  width: 2em;
+  height:2em;
+  transform: rotate(180deg)
+}

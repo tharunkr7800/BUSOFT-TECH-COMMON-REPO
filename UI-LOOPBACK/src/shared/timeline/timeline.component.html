@@ -1,0 +1,34 @@
+<div class="card mt-20">
+  <div class="card-header">
+    <h4>Incident Tracker</h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="customized-timeline">
+          <p-timeline [value]="events" styleClass="customized-timeline">
+            <ng-template pTemplate="marker" let-event>
+                <span class="custom-marker p-shadow-2">
+                    <i class="pi pi-calendar"></i>
+                </span>
+            </ng-template>
+            <ng-template pTemplate="opposite" let-event>
+                <div class="left-content">
+                  <h5>{{event.assignedTo}}</h5>
+                    <div>{{event.createdon}}</div>
+                    <div>#{{event.reference}}</div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate="content" let-event>
+              <div class="right-content" [ngClass]="{'waiting':event.status==='waiting','solved':event.status==='solved','updated':event.status==='updated'}">
+                <h5>{{event.subject}}</h5>
+                <div>{{event.callreason}}</div>
+                <div class="outcome">{{event.calloutcome}}</div>
+              </div>
+          </ng-template>
+        </p-timeline>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
