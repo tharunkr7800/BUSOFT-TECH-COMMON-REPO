@@ -1,0 +1,32 @@
+#chart{
+    float:right;
+    top:0px;
+    width: 500px;
+    height: 200px;
+}
+#div2{
+    width: 50%;
+    height: 10%;
+    top:auto;
+    right:10%;
+    border-top: 2x;
+    border-bottom: 2px;
+    border-color: black;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    }
+#div3{
+width: 50%;
+height:30%;
+float: left;
+top:50%;
+left:0px;
+border-top: 2x;
+border-bottom: 2px;
+    border-color: black;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+
+      }
