@@ -1,0 +1,21 @@
+
+
+
+
+I've done few Ml projects that does image-processing and prediction using neural networks,I also have quite a good knowledge in python Ml and Dl 
+libraries like pandas,numpy and tensorflow.Java is my strength while I also have knowledge about HTML,CSS,javascript and php.As of now I haven't 
+been exposed to any of the cloud computing platforms, but would very much love to learn and upgrade my skills.I'am basically interseted 
+in being a part of Node Js, angular Js AWS and Ml related projects.
+
+SKILLS:
+1.ML-intermidiate
+2.Java
+3.Python
+4.Image-processing and neural networks
+5.HTML,CSS
+
+INTERESTED IN:
+1.AWS,Azure
+2.Node Js and Angular Js
+3.Ml
+4.API's

@@ -1,0 +1,9 @@
+NATIVE APPS 
+794e2ce0-1df0-485b-a71c-4c94bac3f823  -->app id 
+
+6e804f24-0209-4dcd-ac89-97525eddbd30 -->tenant id
+
+SERVER SIDE:
+7a4551f6-5c17-4a83-ae12-cf21486c01e5---> app (client)id
+
+I7Ea86ie01V3dKugoU21lTq6+H+geVE39NH95EkWxnw= --> app secret
