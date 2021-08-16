@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Interaction</h4>
+  </div>
+  <div class="card-body">
+    <div class="row sticky-search">
+      <div class="col-lg-3 col-md-6">
+        <div class="formInput">
+          <span class="p-float-label">
+            <input id="float-input" type="text" pInputText>
+            <label for="float-input">Referece ID</label>
+          </span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="formInput">
+          <span class="p-float-label">
+            <input id="float-input" type="text" pInputText>
+            <label for="float-input">Subject</label>
+          </span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="formInput">
+          <span class="p-float-label" >
+            <p-calendar [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030" inputId="navigators"></p-calendar>
+            <label for="float-input">Created</label>
+          </span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 pr-0 d-flex align-items-center">
+        <div class="d-flex align-items-center">
+          <button><i class="mdi mdi-magnify"></i><span>Search</span></button>
+          <button routerLink="/newInteraction" class="ml-20 warning"><i class="mdi mdi-plus"></i><span>New</span></button>
+        </div>
+      </div>
+  </div>
+      <div>
+       <app-incident-list></app-incident-list>
+      </div>
+  </div>
+
+</div>
