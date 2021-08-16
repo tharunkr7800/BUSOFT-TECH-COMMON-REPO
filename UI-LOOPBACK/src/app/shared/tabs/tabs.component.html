@@ -1,0 +1,20 @@
+<p-tabView>
+  <p-tabPanel *ngFor="let element of tabData" [header]="element.header" [selected]="element.selected"
+    [leftIcon]="element.icon">
+    <ng-container *ngIf="element.name==='messages'">
+      <app-message-threads></app-message-threads>
+    </ng-container>
+    <ng-container *ngIf="element.name==='attachements'">
+      <app-attachements></app-attachements>
+    </ng-container>
+    <ng-container *ngIf="element.name==='auditlogs'">
+      <app-auditlog></app-auditlog>
+    </ng-container>
+    <ng-container *ngIf="element.name==='notes'">
+      <app-notes></app-notes>
+    </ng-container>
+    <ng-container *ngIf="element.name==='interactions'">
+      <app-incident-list></app-incident-list>
+    </ng-container>
+  </p-tabPanel>
+</p-tabView>

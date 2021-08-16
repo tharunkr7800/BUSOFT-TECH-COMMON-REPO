@@ -1,0 +1,45 @@
+<form>
+<div *ngFor="let element of formData" class="row">
+    <h4>{{ element.section }}</h4>
+  <div *ngFor="let input of element.fields" [ngClass]="{'col-lg-3 col-md-6':multicolumn,'col-lg-12 col-md-12':!multicolumn}">
+    <ng-container *ngIf="input.type==='text'">
+        <div class="formInput" *ngIf="editable==true">
+          <span class="p-float-label">
+            <input id="float-input" type="text" pInputText>
+            <label for="float-input">{{input.label}}</label>
+          </span>
+        </div>
+        <div class="formInput-" *ngIf="editable==false">
+            <label for="float-input">{{input.label}}</label>
+            <p>{{input.value}}</p>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="input.type==='list'">
+        <div class="formInput" *ngIf="editable==true">
+          <span class="p-float-label">
+            <p-autoComplete [showEmptyMessage]="true" [suggestions]="filteredList"
+              (completeMethod)="filterList(input.list,$event)" field="label" [minLength]="1" [dropdown]="true">
+            </p-autoComplete>
+            <label for="float-input">{{input.label}}</label>
+          </span>
+        </div>
+        <div class="formInput-" *ngIf="editable==false">
+          <label for="float-input">{{input.label}}</label>
+          <p>{{input.value}}</p>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="input.type==='date'">
+        <div class="formInput" *ngIf="editable==true">
+          <span class="p-float-label">
+            <p-calendar [showIcon]="true" [monthNavigator]="true" [yearNavigator]="true" [yearRange]="input.yearRange" inputId="input.id"></p-calendar>
+            <label for="float-input">{{input.label}}</label>
+          </span>
+        </div>
+        <div class="formInput-" *ngIf="editable==false">
+          <label for="float-input">{{input.label}}</label>
+          <p>{{input.value}}</p>
+        </div>
+    </ng-container>
+  </div>
+</div>
+</form>

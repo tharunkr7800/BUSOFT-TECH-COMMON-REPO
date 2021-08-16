@@ -1,0 +1,48 @@
+<p-table styleClass="p-datatable-striped" [value]="contacts" #dt1 [paginator]="true" [rows]="10" [showCurrentPageReport]="true" selectionMode="single"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="lastname">Last Name<p-sortIcon field="lastname"></p-sortIcon></th>
+                <th pSortableColumn="firstname">First Name<p-sortIcon field="firstname"></p-sortIcon></th>
+                <th >Organisation</th>
+                <th >Email</th>
+                <th >Office Phone</th>
+                <th pSortableColumn="status">Disabled<p-sortIcon field="status"></p-sortIcon></th>
+                <th pSortableColumn="interactions" width="150px">Interactions<p-sortIcon field="interactions"></p-sortIcon></th>
+            </tr>
+            <tr>
+              <th>
+                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'lastname', 'contains')" [value]="dt1.filters['lastname']?.value" placeholder="Search by lastname">
+              </th>
+              <th>
+                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'firstname', 'contains')" [value]="dt1.filters['firstname']?.value" placeholder="Search by firstname">
+              </th>
+              <th>
+                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'organization', 'contains')" [value]="dt1.filters['organization']?.value" placeholder="Search by organization">
+              </th>
+              <th>
+                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'email', 'contains')" [value]="dt1.filters['email']?.value" placeholder="Search by email">
+              </th>
+              <th>
+                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'phone', 'contains')" [value]="dt1.filters['phone']?.value" placeholder="Search by phone">
+              </th>
+              <th>
+                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'status', 'contains')" [value]="dt1.filters['status']?.value" placeholder="Search by status">
+              </th>
+              <th>
+                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'interactions', 'contains')" [value]="dt1.filters['interactions']?.value" placeholder="Search by interactions">
+              </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-contacts>
+            <tr (click)="onSelect(contacts)">
+                <td>{{contacts.lastname}}</td>
+                <td>{{contacts.firstname}}</td>
+                <td>{{contacts.organization}}</td>
+                <td>{{contacts.email}}</td>
+                <td>{{contacts.phone}}</td>
+                <td>{{contacts.status}}</td>
+                <td width="150px">{{contacts.interactions}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
