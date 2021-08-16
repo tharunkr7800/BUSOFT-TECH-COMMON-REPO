@@ -1,0 +1,122 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex justify-content-end">
+        <button routerLink="/newPeople" class="rml mb-20">
+          <i class="mdi mdi-plus"></i><span>Add People</span>
+        </button>
+        <button routerLink="/people" class="rml mb-20">
+          <i class="mdi mdi-eye-outline"></i><span>View People</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-20">
+    <div class="col-12">
+      <h3>Interactions</h3>
+    </div>
+  </div>
+
+  <div class="row mb-20">
+    <div class="col-lg-3 col-md-4">
+      <div class="d-flex success">
+        <div class="icon">
+          <i class="mdi mdi-calendar-multiple-check"></i>
+        </div>
+        <div class="content">
+          <div class="count">1000</div>
+          <div class="title">YEARLY</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="d-flex info">
+        <div class="icon">
+          <i class="mdi mdi-calendar-month"></i>
+        </div>
+        <div class="content">
+          <div class="count">800</div>
+          <div class="title">MONTHLY</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="d-flex warning">
+        <div class="icon">
+          <i class="mdi mdi-calendar-week"></i>
+        </div>
+        <div class="content">
+          <div class="count">400</div>
+          <div class="title">WEEKLY</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="d-flex danger">
+        <div class="icon">
+          <i class="mdi mdi-calendar-clock"></i>
+        </div>
+        <div class="content">
+          <div class="count">100</div>
+          <div class="title">LAST 24 HRS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h4>Interactions by severity</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div id="severity" style="width:100%; height:300px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h4>Interactions by Status</h4>
+        </div>
+        <div class="card-body">
+        <div id="status" style="height:300px"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h4>Top 5 products with Open Interactions</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div id="product" style="width:100%; height:300px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h4>Top 5 Agents Open Interactions</h4>
+        </div>
+        <div class="card-body">
+        <div id="agents" style="height:300px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
