@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header">
+      <h4>People </h4>
+    </div>
+    <form #contactsSearchForm = "ngForm">
+    <div class="card-body">
+        <div class="row sticky-search">
+            <div class="col-lg-3 col-md-6">
+              <div class="formInput">
+                <span class="p-float-label">
+                  <input id="float-input" type="text" id="lastName" name="lastName" [(ngModel)]="SearchContactData.lastName" #lastname="ngModel" pInputText >
+                  <label for="float-input">Last name</label>
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="formInput">
+                <span class="p-float-label">
+                  <input id="float-input" type="text"  name="officePhoneNo" [(ngModel)]="SearchContactData.officePhoneNo" #officePhoneNo="ngModel" pInputText>
+                  <label for="float-input">Phone no</label>
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="formInput">
+                <span class="p-float-label">
+                  <input id="float-input" type="text"  name="email" id="email" #email="ngModel" [(ngModel)]="SearchContactData.email" pInputText>
+                  <label for="float-input">Email</label>
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 pr-0 d-flex align-items-center">
+              <div class="d-flex align-items-center">
+                <button (click)="searchContact()"><i class="mdi mdi-magnify"></i><span>Search</span></button>
+                <button routerLink="/newPeople" class="ml-20 warning"><i class="mdi mdi-plus"></i><span>New</span></button>
+              </div>
+            </div>
+        </div>
+        <div>
+          <app-contact-list></app-contact-list>
+        </div>
+    </div>
+  </form>
+
+  </div>
