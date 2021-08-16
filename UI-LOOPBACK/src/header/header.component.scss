@@ -1,0 +1,43 @@
+nav{
+  background: #3639a4;
+}
+a.navbar-brand {
+  color:#fff;
+  font-size:2rem;
+  font-weight:800;
+}
+
+.user{
+    border: solid 1px #6163a7;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    padding: 2px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  border-radius: 40px;
+  i{
+    position: relative;
+    top: -10px;
+    color: #fff;
+    left: 2px;
+    font-size: 2.4rem;
+  }
+}
+
+.title {
+  padding:5px;
+  color:#fff;
+}
+.dropdown{
+  width:40px;
+  height:40px;
+  border-radius: 40px;
+  color:#fff;
+  padding:5px;
+  font-size: 1.25rem;
+}
