@@ -1,0 +1,53 @@
+<p-table #dt [value]="incidents" styleClass="p-datatable-striped">
+
+  <ng-template pTemplate="caption" class="report-data-header">
+           Export file as <button type="button" pButton icon="pi pi-file-o" (click)="dt.exportCSV()" class="p-mr-2" pTooltip="CSV" tooltipPosition="bottom"></button>
+            <button type="button" pButton icon="pi pi-file-excel" (click)="exportExcel()" class="p-button-success p-mr-2"  pTooltip="XLS" tooltipPosition="bottom"></button>
+  </ng-template>
+  <ng-template pTemplate="header">
+      <tr>
+          <th  pSortableColumn="firstname">
+            First name
+            <p-sortIcon field="firstname"></p-sortIcon>
+          </th>
+          <th pSortableColumn="lastname">
+            Last name
+            <p-sortIcon  field="lastname"></p-sortIcon>
+          </th>
+          <th>
+            Email
+          </th>
+         <th pSortableColumn="incidents">
+            No of Incidents
+            <p-sortIcon field="incidents"></p-sortIcon>
+          </th>
+      </tr>
+      <tr>
+        <th>
+            <p-columnFilter type="text" field="firstname"></p-columnFilter>
+        </th>
+        <th>
+            <p-columnFilter type="text" field="lastname"></p-columnFilter>
+        </th>
+        <th></th>
+        <th></th>
+      </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-incidents>
+      <tr>
+          <td>
+              {{incidents.firstname}}
+          </td>
+          <td>
+            {{incidents.lastname}}
+        </td>
+        <td>
+          {{incidents.email}}
+      </td>
+      <td>
+        {{incidents.incidents}}
+    </td>
+      </tr>
+  </ng-template>
+</p-table>

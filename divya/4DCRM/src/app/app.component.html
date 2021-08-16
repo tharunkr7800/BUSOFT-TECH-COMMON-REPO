@@ -1,0 +1,11 @@
+<ng-container *ngIf="data?.authendicated">
+  <app-header></app-header>
+</ng-container>
+<ng-container *ngIf="data?.authendicated">
+  <div class="leftMenu">
+    <app-left-nav></app-left-nav>
+  </div>
+</ng-container>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
