@@ -1,0 +1,43 @@
+LOOPBACK – API CREATION
+
+INSTALLATIONS
+
+For loopback CLI:
+$ npm install -g @loopback/cli
+
+For email validation:
+$ npm install isemail
+
+To install lodash:
+$ npm i --save lodash
+
+For password encryption with bcrypt - password-hashing function
+$ npm install bcryptjs @types/bcryptjs 
+
+For JWT Authentication:
+$ npm i --save @loopback/authentication 
+$ npm i --save @loopback/authentication-jwt
+
+To install httpClient module:
+$ npm install httpclient
+
+
+LOOPBACK4 COMMANDS
+
+To create a new project:
+$ lb4 app
+
+To create Datasource
+$ lb4 datasource
+
+To create models
+$ lb4 model
+
+To generate models from already existing database:
+$ lb4 discover --schema database_name
+
+To create repository:
+$ lb4 repository
+
+To create relations between the models:
+$ lb4 relation
