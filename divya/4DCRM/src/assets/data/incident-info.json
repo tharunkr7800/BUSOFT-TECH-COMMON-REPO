@@ -1,0 +1,213 @@
+{
+  "formData": [
+    {
+      "section": "Interaction Information",
+      "fields": [
+        {
+          "type": "text",
+          "label":"Reference Number",
+          "placeholder": "Reference Number",
+          "required": true,
+          "name": "referenceno",
+          "min-length": "",
+          "max-length": "30"
+        },
+        {
+          "type": "text",
+          "label": "Subject",
+          "placeholder": "Subject",
+          "required": true,
+          "name": "subject",
+          "min-length": "",
+          "max-length": "30"
+        },
+        {
+          "type": "list",
+          "label": "Reason type",
+          "placeholder": "Reason type",
+          "required": true,
+          "name": "reasontype",
+          "list": [
+            {
+              "label": "Reason type 1",
+              "value": "1"
+            },
+            {
+              "label": "Reason type 2",
+              "value": "2"
+            },
+            {
+              "label": "Reason type 3",
+              "value": "3"
+            },
+            {
+              "label": "Reason type 4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "label": "Reason for contact",
+          "placeholder": "Reason for contact",
+          "required": true,
+          "name": "reasonForContact",
+          "list": [
+            {
+              "label": "Reason 1",
+              "value": "1"
+            },
+            {
+              "label": "Reason 2",
+              "value": "2"
+            },
+            {
+              "label": "Reason 3",
+              "value": "3"
+            },
+            {
+              "label": "Reason 4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "label": "Category",
+          "placeholder": "Category",
+          "required": true,
+          "name": "gategory",
+          "list": [
+            {
+              "label": "Gategory 1",
+              "value": "1"
+            },
+            {
+              "label": "Gategory 2",
+              "value": "2"
+            },
+            {
+              "label": "Gategory 3",
+              "value": "3"
+            },
+            {
+              "label": "Gategory 4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "label": "Assinged to",
+          "placeholder": "Assinged to",
+          "required": true,
+          "name": "assignedto",
+          "list": [
+            {
+              "label": "Agent 1",
+              "value": "1"
+            },
+            {
+              "label": "Agent 2",
+              "value": "2"
+            },
+            {
+              "label": "Agent 3",
+              "value": "3"
+            },
+            {
+              "label": "Agent 4",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "label": "Status",
+          "placeholder": "Status",
+          "required": true,
+          "name": "status",
+          "list": [
+            {
+              "label": "Unresolved",
+              "code": "p1"
+            },
+            {
+              "label": "Updated",
+              "code": "p1"
+            },
+            {
+              "label": "Solved",
+              "code": "p1"
+            },
+            {
+              "label": "Waiting",
+              "code": "p1"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "label": "Closure to reason",
+          "placeholder": "Closure to reason",
+          "required": true,
+          "name": "closureToReason",
+          "list": [
+            {
+              "label": "Reason 1",
+              "code": "p1"
+            },
+            {
+              "label": "Reason 2",
+              "code": "p1"
+            },
+            {
+              "label": "Reason 3",
+              "code": "p1"
+            },
+            {
+              "label": "Reason 3",
+              "code": "p1"
+            }
+          ]
+        },
+        {
+          "type": "date",
+          "label": "Created date",
+          "placeholder": "Created date",
+          "required": true,
+          "name": "createdDate",
+          "yearRange":"1900:2100"
+        },
+        {
+          "type": "date",
+          "label": "Updated date",
+          "placeholder": "Updated date",
+          "required": true,
+          "name": "updatedDate",
+          "yearRange":"1900:2100"
+        }
+      ]
+    }
+  ],
+  "tabData":[
+    {
+      "header":"Messages",
+      "name":"messages",
+      "selected":true,
+      "icon":"pi pi-envelope"
+    },
+    {
+      "header":"Attachments",
+      "name":"attachements",
+      "selected":false,
+      "icon":"pi pi-paperclip"
+    },
+    {
+      "header":"Audit Log",
+      "name":"auditlogs",
+      "selected":false,
+      "icon":"pi pi-file"
+    }
+  ]
+}

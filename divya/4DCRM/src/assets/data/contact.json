@@ -1,0 +1,79 @@
+{
+    "formData":[{
+        "section":"People Information",
+        "fields":[
+            {
+                "type":"text",
+                "label":"First name",
+                "placeholder":"First name",
+                "required":true,
+                "name":"firstname",
+                "min-length":"",
+                "max-length":"30",
+                "value":"Parker"
+            },
+            {
+                "type":"text",
+                "label":"Last name",
+                "placeholder":"Last name",
+                "required":true,
+                "name":"lasttname",
+                "min-length":"",
+                "max-length":"30",
+               "value":"Terik"
+            },
+            {
+                "type":"text",
+                "label":"Phone no",
+                "placeholder":"Phone no",
+                "required":true,
+                "name":"phoneno",
+                "min-length":"",
+                "max-length":"10",
+                "value":"9090909090"
+            },
+            {
+                "type":"text",
+                "label":"Email",
+                "placeholder":"Email",
+                "required":true,
+                "name":"lasttname",
+                "min-length":"",
+                "max-length":"30",
+                "value":"parker.teric@outlook.con"
+            },
+            {
+                "type":"text",
+                "label":"Organization",
+                "placeholder":"Organization",
+                "required":true,
+                "name":"organization",
+                "min-length":"",
+                "max-length":"30",
+                "value":"Smith and Smith"
+            },
+            {
+                "type":"date",
+                "label":"Created",
+                "placeholder":"Created",
+                "required":true,
+                "name":"created",
+                "min-length":"",
+                "max-length":"10",
+                "yearRange":"1900:2100",
+                "value":"11/07/2021"
+            },
+            {
+                "type":"date",
+                "label":"Last edit",
+                "placeholder":"Last edit",
+                "required":true,
+                "name":"lastedit",
+                "min-length":"",
+                "max-length":"10",
+                "yearRange":"1900:2100",
+                "value":"10/11/2020"
+            }
+        ]
+    }]
+}

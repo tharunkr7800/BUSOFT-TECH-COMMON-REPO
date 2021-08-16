@@ -1,0 +1,235 @@
+{
+  "formData": [
+    {
+      "section": "Basic Information",
+      "fields": [
+        {
+          "type": "text",
+          "label": "First name",
+          "placeholder": "First name",
+          "required": true,
+          "name": "firstname",
+          "minlength": "",
+          "maxlength": "30"
+        },
+        {
+          "type": "text",
+          "label": "Last name",
+          "placeholder": "Last name",
+          "required": true,
+          "name": "lastname",
+          "minlength": "",
+          "maxlength": "30"
+        },
+        {
+          "type": "text",
+          "label": "Office phone no",
+          "placeholder": "Office phone no",
+          "required": true,
+          "name": "officePhoneNo",
+          "minlength": "",
+          "maxlength": "10"
+        },
+        {
+          "type": "text",
+          "label": "Home phone",
+          "placeholder": "Home phone",
+          "required": true,
+          "name": "homephone",
+          "minlength": "",
+          "maxlength": "10"
+        },
+        {
+          "type": "text",
+          "label": "Email",
+          "placeholder": "Email",
+          "required": true,
+          "name": "email",
+          "minlength": "",
+          "maxlength": "30"
+        },
+        {
+          "type": "date",
+          "label": "Date of Birth",
+          "placeholder": "Date of Birth",
+          "required": true,
+          "name": "dob",
+          "yearRange": "1900:2100"
+        },
+        {
+          "type": "list",
+          "label": "People Type",
+          "placeholder": "People Type",
+          "required": true,
+          "name": "peopleType",
+          "list": [
+            {
+              "label": "Internal User",
+              "value": "internal user"
+            },
+            {
+              "label": "End User",
+              "value": "end user"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Address",
+      "fields": [
+        {
+          "type": "text",
+          "label": "Address line 1",
+          "placeholder": "Address line 1",
+          "required": true,
+          "name": "addressLine1",
+          "minlength": "",
+          "maxlength": "30"
+        },
+        {
+          "type": "text",
+          "label": "Address line 2",
+          "placeholder": "Address line 2",
+          "required": true,
+          "name": "addressLine2",
+          "minlength": "",
+          "maxlength": "30"
+        },
+        {
+          "type": "text",
+          "label": "Address line 3",
+          "placeholder": "Address line 3",
+          "required": true,
+          "name": "addressLine3",
+          "minlength": "",
+          "maxlength": "30"
+        },
+        {
+          "type": "list",
+          "label": "City",
+          "placeholder": "City",
+          "required": true,
+          "name": "city",
+          "list": [
+            {
+              "label": "City 1",
+              "value": "city 1"
+            },
+            {
+              "label": "City 2",
+              "value": "city 2"
+            },
+            {
+              "label": "City 3",
+              "value": "city 3"
+            },
+            {
+              "label": "City 4",
+              "value": "city 4"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "label": "Town / Country",
+          "placeholder": "Town / Country",
+          "required": true,
+          "name": "town",
+          "list": [
+            {
+              "label": "Town 1",
+              "value": "Town 1"
+            },
+            {
+              "label": "Town 2",
+              "value": "town 2"
+            },
+            {
+              "label": "Town 3",
+              "value": "town 3"
+            },
+            {
+              "label": "Town 4",
+              "value": "town 4"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Postal code",
+          "placeholder": "Postal code",
+          "required": true,
+          "name": "postalcode",
+          "minlength": "",
+          "maxlength": "10"
+        },
+        {
+          "type": "list",
+          "label": "Country",
+          "placeholder": "Country",
+          "required": true,
+          "name": "country",
+          "list": [
+            {
+              "label": "Country 1",
+              "value": "country 1"
+            },
+            {
+              "label": "Country 2",
+              "value": "country 2"
+            },
+            {
+              "label": "Country 3",
+              "value": "country 3"
+            },
+            {
+              "label": "Country 4",
+              "value": "country 4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Organization",
+      "fields": [
+        {
+          "type": "text",
+          "label": "",
+          "placeholder": "",
+          "required": true,
+          "name": "organization",
+          "minlength": "",
+          "maxlength": "10"
+        }
+      ]
+    }
+  ],
+  "tabData": [
+    {
+      "header": "Interactions",
+      "name": "interactions",
+      "selected": true,
+      "icon": "pi pi-bell"
+    },
+    {
+      "header": "Attachments",
+      "name": "attachements",
+      "selected": false,
+      "icon": "pi pi-paperclip"
+    },
+    {
+      "header": "Notes",
+      "name": "notes",
+      "selected": false,
+      "icon": "pi pi-file"
+    },
+    {
+      "header": "Audit Log",
+      "name": "auditlogs",
+      "selected": false,
+      "icon": "pi pi-file"
+    }
+  ]
+}

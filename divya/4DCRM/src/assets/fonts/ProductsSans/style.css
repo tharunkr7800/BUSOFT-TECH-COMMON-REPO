@@ -1,0 +1,20 @@
+    @font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-kerning: auto;
+    src: url('../ProductsSans/ProductSansRegular.woff') format('woff'),
+         url('../ProductsSans/ProductSansRegular.ttf') format('ttf'),
+         url('../ProductsSans/ProductSansRegular.otf') format('otf'),
+         url('../ProductsSans/ProductSansRegular.eot') format('eot')
+    }
+    @font-face {
+      font-family: 'Product Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-kerning: auto;
+      src: url('../ProductsSans/ProductSansBold.woff') format('woff'),
+           url('../ProductsSans/ProductSansBold.ttf') format('ttf'),
+           url('../ProductsSans/ProductSansBold.otf') format('otf'),
+           url('../ProductsSans/ProductSansBold.eot') format('eot')
+      }
