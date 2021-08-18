@@ -10,7 +10,8 @@ warnings.filterwarnings("ignore")
 import math
 import numpy as np
 from multiprocessing import Pool, cpu_count
-
+import pymysql
+import boto3
 
 class find_similar:
     def __init__(self, corpus, tokenizer=None):
@@ -120,23 +121,63 @@ def main():
     inp = json.loads(sys.argv[1])
     #inp=input()
 
-    #t0 = timer()
+    #reading from local host
     df = pd.read_csv('E:\\intern\\threads1.csv')
     incident= pd.read_csv('E:\\intern\\Incident.csv')
+
+    #reading from aws server
+    host="test4dcrm.cbf9endmbguy.us-east-1.rds.amazonaws.com"
+    port=7961
+    dbname="testMLDB"
+    user="testcrmadmin"
+    password="iyXwUS2$021!S7gyqPoUaYw"
+
+    conn = pymysql.connect(host=host, user=user,port=port,passwd=password, db=dbname)
+    #incident = pd.read_sql_query('select * from Incidents',conn)
+    #df= pd.read_sql_query('select * from Threads',conn)
     df=clean(df,incident)
+      
+    tok_text=[]
+    #reading tokens from local machine
+    '''
+    with open("E:\\intern\\text.txt", "r", newline="",encoding="utf-8") as f:
+        while True:
+            line = f.readline()
+            if not line:
+                break
+            tok_text.append(line.split())
+            '''
+    # get a handle on s3
+    s3 = boto3.resource(
+    service_name='s3',
+    region_name='us-east-2',
+    aws_access_key_id='AKIAX4QEIQOMGAV5RVVA',
+    aws_secret_access_key='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'
+    )
 
-    #read tokens from csv file
-    with open('E:\\intern\\final_full_length.csv', newline='',encoding="utf-8") as f:
-        reader = csv.reader(f)
-        data = list(reader)
-    #load object from file to increase speed of time
-    with open('E:\\intern\\object.obj', 'rb') as object_file:
+# get a handle on the bucket that holds your file
+    bucket = s3.Bucket(u'aws-intern-test')
+    obj = bucket.Object(key=u'final_full_length.txt')
+    # get the object
+    tok_text=[]
+   #reading tokens from aws S3 bucket
+    for line in obj.get()['Body'].read().splitlines():
+        each_line = line.decode('utf-8')
+        tok_text.append(each_line.split())
     
+    #load object from file to increase speed of time
+    '''
+    with open('E:\\intern\\object.obj', 'rb') as object_file:
         bmi=pickle.load(object_file)
-
-
+    '''
+    #loading object from S3 bucket 
+    obj = bucket.Object(key=u'object.obj')
+    bmi = pickle.loads(obj.get()['Body'].read())
+    #bmi=find_similar_api(tok_text)
     tokenized_query = inp.lower().split(" ")
-    results=bmi.get_top_n(tokenized_query,df.Text.iloc[:len(data)].values)
+    results=bmi.get_top_n(tokenized_query,df.Text.iloc[:len(tok_text)].values)
+
+    #results=bmi.get_top_n(tokenized_query,df.Text.iloc[:len(data)].values)
 
     finaldata={"incident_id":1,"text":"test","thread_id":1}
     finaljson=[]
@@ -148,11 +189,9 @@ def main():
         finaldata["text"]=text
         finaldata['thread_id']=thread_id
         finaljson.append(finaldata.copy())
-    #t1 = timer()
     jsonstr = json.dumps(finaljson)
-    #print("Time elapsed = ",t1-t0,"seconds")
-
     print(jsonstr)
     sys.stdout.flush()
 if __name__=="__main__":
     main()
+
