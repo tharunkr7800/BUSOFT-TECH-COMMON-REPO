@@ -14,11 +14,11 @@ import pymysql
 import pandas as pd
 
 #reading from aws server 
-host="test4dcrm.cbf9endmbguy.us-east-1.rds.amazonaws.com"
+host="host"
 port=7961
-dbname="testMLDB"
-user="testcrmadmin"
-password="iyXwUS2$021!S7gyqPoUaYw"
+dbname="db"
+user="user"
+password="pwd"
 
 conn = pymysql.connect(host=host, user=user,port=port,
                            passwd=password, db=dbname)

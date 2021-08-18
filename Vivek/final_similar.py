@@ -126,11 +126,11 @@ def main():
     incident= pd.read_csv('E:\\intern\\Incident.csv')
 
     #reading from aws server
-    host="test4dcrm.cbf9endmbguy.us-east-1.rds.amazonaws.com"
+    host="host"
     port=7961
-    dbname="testMLDB"
-    user="testcrmadmin"
-    password="iyXwUS2$021!S7gyqPoUaYw"
+    dbname="db"
+    user="user"
+    password="pwd"
 
     conn = pymysql.connect(host=host, user=user,port=port,passwd=password, db=dbname)
     #incident = pd.read_sql_query('select * from Incidents',conn)
@@ -151,8 +151,8 @@ def main():
     s3 = boto3.resource(
     service_name='s3',
     region_name='us-east-2',
-    aws_access_key_id='AKIAX4QEIQOMGAV5RVVA',
-    aws_secret_access_key='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'
+    aws_access_key_id='accesskey',
+    aws_secret_access_key='secretaccesskey'
     )
 
 # get a handle on the bucket that holds your file
